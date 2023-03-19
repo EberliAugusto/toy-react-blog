@@ -16,8 +16,9 @@ export function Ref(props) {
     const source = thisArticle && thisArticle.sources[props.code]
 
     if (source) {
+        const desc = props.noBrackets ? source.shortDesc : `[${source.shortDesc}]`
         return <Link href={source.href}>
-            [{source.shortDesc}]
+            {desc}
         </Link>
     }
 

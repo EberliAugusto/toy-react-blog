@@ -16,7 +16,7 @@ export default function Routing() {
                 {
                     Cp.arts.all.map(art => {
                         return <Route key={art.ref}
-                            path={art.group().routeTo + art.routeTo}
+                            path={art.routeTo}
                             element={<art.page />} />
                     })}
                 <Route path='/about' element={<About />} />

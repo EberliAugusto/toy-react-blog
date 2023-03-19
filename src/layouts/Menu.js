@@ -86,7 +86,7 @@ export default function PageMenu() {
             nodeId={art.ref}
             labelText={art.label}
             labelIcon={art.icon}
-            routeTo={art.group().routeTo + art.routeTo} />
+            routeTo={art.routeTo} />
         })
         }
       </StyledTreeItem>
