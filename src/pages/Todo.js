@@ -24,9 +24,11 @@ export default function Todo() {
         <T2>Fixes</T2>
         <ul>
             <li>Menu items colors</li>
+            <li>While moving one article to another, I get: <code>To locate the bad setState() call inside `Sources`, follow the stack trace as described in...</code></li>
         </ul>
         <T2>Improvements</T2>
         <ul>
+            <li>Test if page renders on specific routes</li>
             <li>Add author section to the articles</li>
             <li>Fix orthography errors</li>
             <li>Better font for the logo</li>
@@ -41,10 +43,11 @@ export default function Todo() {
             <li>Add dynamic content table for articles</li>
         </ul>
 
-        <T2>Done items</T2>
+        <T2>Done</T2>
 
         To help me fell progress:
         <ul>
+
             <li>Able to create tree icons from svg files.</li>
             <li>Fix scrolling on SM with drawer open.</li>
             <li>Better icon added</li>

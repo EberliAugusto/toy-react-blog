@@ -1,5 +1,5 @@
 
-import {aboutIconRef, architectureIconRef, javaIconRef, todoIconRef} from '../assets/IconsMap';
+import * as Icons from '../assets/Icons';
 
 let sequenceCounter = 0;
 
@@ -10,7 +10,7 @@ export default {
         architecture: {
             position: sequenceCounter++,
             label: "Architecture",
-            icon: architectureIconRef,
+            icon: Icons.architectureIconRef,
             items: {
                 restful: {
                     position: sequenceCounter++,
@@ -22,7 +22,7 @@ export default {
         java: {
             position: sequenceCounter++,
             label: "Java",
-            icon: javaIconRef,
+            icon: Icons.javaIconRef,
             items: {
                 javaFeaturesByRelease: {
                     position: sequenceCounter++,
@@ -34,13 +34,13 @@ export default {
         about: {
             position: sequenceCounter++,
             label: "About",
-            icon: aboutIconRef,
+            icon: Icons.aboutIconRef,
             routeTo: '/about',
         },    
         todo: {
             position: sequenceCounter++,
             label: "Todo",
-            icon: todoIconRef,
+            icon: Icons.todoIconRef,
             routeTo: '/todo',
         },             
     }

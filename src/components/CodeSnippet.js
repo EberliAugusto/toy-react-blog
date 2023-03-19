@@ -22,7 +22,7 @@ function fixIdentation(code) {
 
 export function Java(props) {
     
-    return <SyntaxHighlighter language="java" style={docco} showLineNumbers wrapLongLines>
+    return <SyntaxHighlighter language="java" style={docco} wrapLongLines>
         {fixIdentation(props.children)}
     </SyntaxHighlighter>
 }

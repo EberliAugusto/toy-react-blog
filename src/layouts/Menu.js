@@ -9,7 +9,7 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import { useDispatch, useSelector } from 'react-redux';
 import Link from '@mui/material/Link';
 import { Link as RouterLink } from 'react-router-dom';
-import IconsMap from '../assets/IconsMap';
+import * as Icons from '../assets/Icons';
 
 function StyledTreeItem(props) {
   const {
@@ -76,7 +76,7 @@ function makeTreeItems (menuItems){
         key={item.id}
         nodeId={item.id}
         labelText={item.label}
-        labelIcon={IconsMap[item.icon]}
+        labelIcon={Icons.get(item.icon)}
         routeTo={item.routeTo}
         children={makeTreeItems(item.items)} />
     )

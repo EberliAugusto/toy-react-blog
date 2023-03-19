@@ -1,6 +1,6 @@
 import React from "react";
-import { T1, T2, T3, Pa, Ta, Col, Row, Art, Ref, Src, Sources } from "../../components/ArticleComponents";
-import { Java } from "../../components/CodeSnippet";
+import { T1, T2, T3, Pa, Ta, Col, Row, Art, Ref, Src, Sources, Java } from "../../components/ArticleComponents";
+
 
 export default function JdkRelases() {
     return (

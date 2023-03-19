@@ -8,9 +8,13 @@ export const javaIconRef = 'java'
 export const todoIconRef = 'todo'
 export const aboutIconRef = 'about'
 
-export default {
+const iconsMap = {
   [architectureIconRef]: ArchitectureIcon,
   [aboutIconRef]: InfoIcon,
   [todoIconRef]: PlaylistAddCheckIcon,
   [javaIconRef]: JavaIcon, 
+}
+
+export function get(ref) {
+  return iconsMap[ref]
 }
