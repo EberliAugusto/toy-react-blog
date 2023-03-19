@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Link from '@mui/material/Link';
 import { Link as RouterLink } from 'react-router-dom';
 import * as Icons from '../assets/Icons';
+import * as Cp from '../pages/ContentMap'
 
 function StyledTreeItem(props) {
   const {
@@ -55,38 +56,9 @@ StyledTreeItem.propTypes = {
   labelText: PropTypes.string.isRequired,
 };
 
-function makeArraysOfItems(menuObject) {
-  if (menuObject) {
-    return Object.keys(menuObject).map((key) => {
-      return {
-        ...(menuObject[key]),
-        id: key,
-        items: makeArraysOfItems(menuObject[key].items)
-      }
-    }
-    ).sort((a, b) => a.sequenceCounter - b.sequenceCounter);
-  }
-  return []
-}
-
-function makeTreeItems (menuItems){
-  if (menuItems) {
-    return menuItems.map(item =>
-      <StyledTreeItem 
-        key={item.id}
-        nodeId={item.id}
-        labelText={item.label}
-        labelIcon={Icons.get(item.icon)}
-        routeTo={item.routeTo}
-        children={makeTreeItems(item.items)} />
-    )
-  }
-  return []
-}
-
 export default function PageMenu() {
 
-  const {expandedItems, menuItems} = useSelector((state) => state.navigation);
+  const { expandedItems } = useSelector((state) => state.navigation);
   const dispatch = useDispatch();
 
   const onNodeToggle = (_event, nodeIds) => {
@@ -101,6 +73,34 @@ export default function PageMenu() {
     defaultExpandIcon={<ArrowRightIcon />}
     defaultEndIcon={<div style={{ width: 24 }} />}
     sx={{ height: 264, flexGrow: 1, maxWidth: 400, overflowY: 'auto' }}>
-    {makeTreeItems(makeArraysOfItems(menuItems))}
+    {Cp.groups.all.map(group => {
+      return <StyledTreeItem
+        key={group.ref}
+        nodeId={group.ref}
+        labelText={group.label}
+        labelIcon={group.icon} >
+        {
+        group.articles().map(art => {
+          return <StyledTreeItem
+            key={art.ref}
+            nodeId={art.ref}
+            labelText={art.label}
+            labelIcon={art.icon}
+            routeTo={art.group().routeTo + art.routeTo} />
+        })
+        }
+      </StyledTreeItem>
+
+    })}
+    <StyledTreeItem
+      nodeId="about"
+      labelText="About"
+      labelIcon={Icons.about}
+      routeTo="/about" />
+    <StyledTreeItem
+      nodeId="todo"
+      labelText="Todo"
+      labelIcon={Icons.todo}
+      routeTo="/todo" />
   </TreeView>)
 }
