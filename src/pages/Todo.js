@@ -10,16 +10,41 @@ export default function Todo() {
         <Pa>In here TODOs for this website are listed.</Pa>
         <T2>Articles to write</T2>
         <ul>
-            <li>Inheritance vs Composition - when to chose?</li>
-            <li>Design patterns</li>
-            <li>SOLID</li>
-            <li>What is wrong with checked exceptions?</li>
-            <li>Data should be normalised or denormalized?</li>
-            <li>How to choose a data base?</li>
-            <li>About all JDK releses from version 8</li>
-            <li>About orchestration vs choreography</li>
-            <li>Article about java records. When to use them?</li>
-            <li>Sealed classes in java</li>
+            <li>Architecture i Design
+                <ul>
+                    <li>Real life examples of SOLID pattern</li>
+                    <li>How do you partition a database?</li>
+                    <li>CQRS</li>
+                    <li>Saga pattern</li>
+                    <li>About orchestration vs choreography</li>
+                    <li>Data should be normalised or denormalized?</li>
+                    <li>How to choose a data base?</li>
+                    <li>Design patterns</li>
+                    <li>SOLID</li>
+                    <li>Inheritance vs Composition - when to chose?</li>
+                    <li>Exactly once guarantee in Kafka, how?</li>
+                    <li>How to extract a microservice from the monolith?</li>
+                </ul>
+            </li>
+            <li>Java
+                <ul>
+                    <li>How does garbage collector work?</li>
+                    <li>How to profile applications in java?</li>
+                    <li>Who does executor service work?</li>
+                    <li>Who does executor service work? Why do we get futures back?</li>
+                    <li>What are transaction scopes?</li>
+                    <li>How to dynamically create objects in Hibernate?</li>
+                    <li>Levels of cachingin JPA?</li>
+                    <li>Lifecycle of JPA object</li>
+                    <li>Give an example of AOP</li>
+                    <li>Hash map, how it works? and collisions?</li>
+                    <li>All Java collections (with Big O notation - average and worst case)</li>
+                    <li>What is wrong with checked exceptions?</li>
+                    <li>About all JDK releses from version 8</li>
+                    <li>Article about java records. When to use them?</li>
+                    <li>Sealed classes in java</li>
+                </ul>
+            </li>
         </ul>
         <T2>Fixes</T2>
         <ul>

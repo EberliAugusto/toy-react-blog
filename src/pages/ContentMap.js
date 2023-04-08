@@ -1,11 +1,13 @@
 import * as Icons from '../assets/Icons'
 import JdkReleasesPage from './java/JdkReleases'
 import JavaRecordsPage from './java/JavaRecords'
+import DefaultMethods from './java/DefaultMethods'
 import RestPage from './architecture/Rest'
 
 
 const refs = {
     arts: {
+        javaDefaultMethods: "interface-default-methods",
         jdkReleases: "jdk-releases",
         javaRecords: "java-records",
         rest: "rest",
@@ -25,6 +27,13 @@ function group(groupRef) {
 
 const allArticles = [
     {
+        ref: refs.arts.javaDefaultMethods,
+        group: group(refs.groups.java),
+        label: "Interface Default Methods",
+        page: DefaultMethods,
+        routeTo: '/interface-default-methods',
+    },    
+    {
         ref: refs.arts.jdkReleases,
         group: group(refs.groups.java),
         label: "JDK Releases",
@@ -41,7 +50,7 @@ const allArticles = [
     {
         ref: refs.arts.rest,
         group: group(refs.groups.architecture),
-        label: "What is Rest all about?",
+        label: "What is Rest All About?",
         page: RestPage,
         routeTo: "/rest"
     }
