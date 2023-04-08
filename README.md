@@ -12,7 +12,7 @@ To run this (NodeJs 18.14.2):
 
 # Goal
 
-* Have fun (enjoy the process)
+* Have fun (enjoy the process) 
 * Reinvent the wheel a little bit (for fun)
 * Maybe do some overkills (for fun)
 
@@ -21,11 +21,11 @@ To run this (NodeJs 18.14.2):
 * "Proper JS"
 * Testing suites
 
-# To you
+## To you
 
 Dear everyone, 
 
-If you you have something cool to share or something you would do differently, let me know, I would love to hear it. :blush:
+If you have something cool to share or something you would do differently, let me know, I would love to hear it. :blush:
 
 Dear recruiter, 
     
