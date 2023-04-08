@@ -10,6 +10,8 @@ To run this (NodeJs 18.14.2):
     npm install
     npm run serve
 
+If you have something cool to share or something you would do differently, let me know, I would love to hear it. :blush:
+
 # Goal
 
 * Have fun (enjoy the process) 
@@ -18,19 +20,9 @@ To run this (NodeJs 18.14.2):
 
 # Non-goals
 
-* "Proper JS"
+* Become a JS or React master
 * Testing suites
 
-## To you
-
-Dear everyone, 
-
-If you have something cool to share or something you would do differently, let me know, I would love to hear it. :blush:
-
-Dear recruiter, 
-    
+### Footnote to recruiters 
+ 
 This is not necessarily representative on how I would build or make decisions for production applications/solutions. I do these tiny projects for personal enjoyment and to scratch my itchy curious brain, using the little free time I have. 
-
-
-
-
